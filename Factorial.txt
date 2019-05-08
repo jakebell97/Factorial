@@ -1,0 +1,30 @@
+//Factorial project (x!)
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int x;
+	char again;
+	double fact;
+	cout << "Factorial Calculator" << endl;
+	cout << "--------------------" << endl << endl;
+	do
+	{
+		fact = 1;
+		cout << "Factorial of: " << endl;
+		cin >> x;
+		if (x != 0)
+		{
+			for (int i = 0; i < x; i++)
+			{
+				fact = fact * (i + 1);
+			}
+		}
+		cout << "is " << fact << endl << endl;
+		cout << "Enter Y to run again: ";
+		cin >> again;
+	} while (again == 'Y' || again == 'y');
+	return 0;
+}
